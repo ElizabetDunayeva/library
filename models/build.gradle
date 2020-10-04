@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'java-gradle-plugin'
+    id 'io.franzbecker.gradle-lombok' version '1.14'
+    id 'java-library'
+
+
+
+}
+
+group 'mailru'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+lombok {
+    version = '1.18.4'
+    sha256 = ""
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'com.intellij', name:'annotations', version: '12.0'
+
+}
